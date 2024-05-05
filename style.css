@@ -1,0 +1,125 @@
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+header,
+main,
+section,
+footer {
+  max-width: 960px; /* Maximum width */
+  width: calc(100% - 40px); /* Full width minus padding */
+  margin: 20px auto; /* Center align */
+  padding: 20px; /* Consistent padding */
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700; /* Uses a bolder weight for headings */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Header Styles */
+.article-header h1 {
+  font-family: "Georgia", serif;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.article-header img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Button Styles */
+#goTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 10px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: opacity 0.3s, background-color 0.3s;
+  -moz-transition: opacity 0.3s, background-color 0.3s;
+  -ms-transition: opacity 0.3s, background-color 0.3s;
+  -o-transition: opacity 0.3s, background-color 0.3s;
+}
+
+#goTopBtn:hover {
+  opacity: 1;
+  background-color: #1a5276;
+}
+
+blockquote {
+  border-left: 5px solid #8e44ad;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  font-style: italic;
+  background-color: #eeeeee;
+}
+
+blockquote footer {
+  display: block;
+  font-size: 0.8em;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header,
+  nav,
+  main,
+  section,
+  article,
+  footer {
+    width: 100%; /* Full width on small screens */
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
